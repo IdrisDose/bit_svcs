@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{655A05FE-001D-4FA7-A906-FFF5616B7889}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BITServices</RootNamespace>
+    <AssemblyName>BITServices</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.9.8\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business Layer\Client.cs" />
+    <Compile Include="Business Layer\Employee.cs" />
+    <Compile Include="Business Layer\Invoice.cs" />
+    <Compile Include="Business Layer\Job.cs" />
+    <Compile Include="Business Layer\Login.cs" />
+    <Compile Include="Business Layer\person.cs" />
+    <Compile Include="Business Layer\Skills.cs" />
+    <Compile Include="Business Layer\Validation.cs" />
+    <Compile Include="Data Layer\DAL.cs" />
+    <Compile Include="Interface Layer\CoordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\CoordForm.Designer.cs">
+      <DependentUpon>CoordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\EditClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\EditClient.Designer.cs">
+      <DependentUpon>EditClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\EditJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\EditJob.Designer.cs">
+      <DependentUpon>EditJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\NewClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\NewClient.Designer.cs">
+      <DependentUpon>NewClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\NewJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\NewJob.Designer.cs">
+      <DependentUpon>NewJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\NewStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\NewStaff.Designer.cs">
+      <DependentUpon>NewStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\EditStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\EditStaff.Designer.cs">
+      <DependentUpon>EditStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface Layer\NewCoord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface Layer\NewCoord.Designer.cs">
+      <DependentUpon>NewCoord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Interface Layer\CoordForm.resx">
+      <DependentUpon>CoordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\EditClient.resx">
+      <DependentUpon>EditClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\EditJob.resx">
+      <DependentUpon>EditJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\NewClient.resx">
+      <DependentUpon>NewClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\NewJob.resx">
+      <DependentUpon>NewJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\NewStaff.resx">
+      <DependentUpon>NewStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\EditStaff.resx">
+      <DependentUpon>EditStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface Layer\NewCoord.resx">
+      <DependentUpon>NewCoord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Images\BitSvcs-logo-app.png" />
+    <Content Include="Images\BitSvcs-logo.png" />
+    <Content Include="Images\BitSvcs.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

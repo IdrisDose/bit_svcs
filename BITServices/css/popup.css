@@ -1,0 +1,44 @@
+.popupContainer{
+	z-index: 101;
+    position:absolute;
+	width:330px;
+	height: auto;
+	left:40%;
+	top:80px;
+	background: #FFF;
+}
+
+.popupHeader {
+    font-weight: 700;
+    background: #F4F4F2;
+    position: relative;
+    padding: 10px 20px;
+    border-bottom: 1px solid #DDD;
+    font-weight: bold;
+}
+
+
+
+.popupBody  {
+    padding: 20px;
+}
+
+.user_login label  {
+    display:  block;
+    margin-bottom: 5px;
+}
+
+.user_login .checkbox  {
+    margin-bottom:  10px;
+     clear:  both;
+     overflow:  hidden;
+}
+
+.forgot_password  {
+    display: block;
+     clear:  both;
+     overflow:  hidden;
+     text-decoration:  none;
+     color: #ED6347;
+}
+
